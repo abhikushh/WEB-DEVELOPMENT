@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+<title>E-REPORT</title>
+<link rel="stylesheet" href="stylee.css"/>
+    <style>
+       body
+{
+ background-image: url(img.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ font-family:Algerian;
+ color:darkorange;
+}
+        h1{
+            background-color: deepskyblue;
+            font-family:Algerian;
+            padding: 15px;
+        }
+ul1
+{
+ margin: 0px;
+ padding: 0px;
+ list-style:none;
+}
+
+ul1 li1
+{
+ float:left;
+ width:260px;
+ height:50;
+ background-color:lawngreen;
+ opacity: .70;
+ line-height: 50px;
+ text-align:center;
+ font-size:30px;
+ margin-right:6.5px;
+ 
+}
+
+ul1 li1 a:hover
+{
+ background-color:red;
+ display:block;
+}
+
+ul1 li1 ul1 li1
+{
+ display : none;
+}
+
+ul1 li1:hover ul1 li1
+{
+ display : block;
+}
+         img{
+            height: 500px;
+            width: 326px;
+        }
+        a{
+            color: white;
+        }
+        
+        #container{
+            transform: translate(0px,80px);
+        }
+    </style>
+</head>
+<body>
+    <div class="abc">
+        <h1 style="color:white;"><center>E-REPORT ..... SHARE OF KNOWLEDGE</center></h1>
+    </div>
+    <center>
+    <div>
+    <ul1>
+    <li1><a href="reading.html">HOME</a></li1>
+    <li1><a href="reading2.html">NDRI</a></li1>
+    <li1><a href="reading0.html">KARNAL</a></li1>
+    <li1><a href="reading4.html">BAREILLY</a></li1>
+         <li1><a href="reading5.html">GOA</a></li1>
+    </ul1></div></center>
+    
+<div id="container">
+<img class="slides" src="vet.jpg" style="width:100%"> 
+<img class="slides" src="vet2.jpg" style="width:100%"> 
+<img class="slides" src="vet3.jpg" style="width:100%">
+    <button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+    <button class="btn"  onclick="plusIndex(1)"  id="btn2">&#10095;</button>
+</div>
+    </body>
+    <script>1
+        var index = 1;
+        
+        function plusIndex(n){
+            index = index + n;
+            showImage(index);
+        }
+        
+        showImage(1);
+        
+        function showImage(n){
+            var i;
+            var x = document.getElementsByClassName("slides");
+            if(n > x.length){ index = 1};
+            if(n < 1){ index = x.length};
+            for(i=0;i<x.length;i++)
+                {
+                    x[i].style.display= "none";
+                }
+            x[index-1].style.display = "block";
+        }
+        autoSlide();
+        function autoSlide(){
+           var i;
+            var x = document.getElementsByClassName("slides");
+            for(i=0;i<x.length;i++)
+                {
+                    x[i].style.display= "none";
+                }
+            if(index > x.length){ index = 1}
+            x[index-1].style.display = "block"; 
+            index++;
+            setTimeout(autoSlide,2000);
+                    }
+    </script>
+    
+   
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+            }
+            #contain ul{
+                list-style: none;
+            }
+            #contain ul li{
+                background-color: #3C3E94;
+                width:250px;
+                height:50px;
+                opacity: .70px;
+                line-height: 50px;
+                border: 1px solid white;
+                text-align: center;
+                float:left;
+                color: white;
+                font-size: 18px;
+                z-index: 0;
+                position: relative;
+            }
+            #contain ul li:hover{
+                background-color: darkorange;
+            }
+            #contain ul ul{
+                display:none;
+            }
+            #contain ul li:hover > ul{
+                display:block;
+            }
+            #contain ul ul ul{
+                margin-left:250px;
+                top:0px;
+                position: absolute;
+            }
+            <link rel="stylesheet" href="style.css"/>
+    <style>
+       body
+{
+ background-image: url(imgg.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ font-family:Algerian;
+ color:darkorange;
+}
+        h1{
+            background-color: deepskyblue;
+            font-family:Algerian;
+            padding: 15px;
+        }
+        h2{
+            background-color: greenyellow;
+            font-family:Algerian;
+            padding: 15px;
+            width: 320px;
+        }
+         h4{
+            background-color: gray;
+             height: 220px;
+        }
+        p{
+            background-color: deepskyblue;
+            padding: 15px;
+        }
+             ul2
+{
+ margin: 0px;
+ padding: 0px;
+ list-style:none;
+}
+
+ul2 li2
+{
+ float:left;
+ width:335px;
+ height:150;
+ background-color:lawngreen;
+ opacity: .70;
+ line-height: 60px;
+ text-align:center;
+ font-size:30px;
+ margin-right:105px;
+    z-index: 0;
+ 
+}
+
+ul2 li2 a:hover
+{
+ background-color:orange;
+ display:block;
+}
+
+ul2 li2 ul2 li2
+{
+ display : none;
+}
+
+ul2 li2:hover ul2 li2
+{
+ display : block;
+}
+        img{
+            height: 150px;
+            width: 326px;
+        }
+        a{
+            color: white;
+        }
+        
+        #container{
+            transform: translate(0px,80px);
+        }
+        <meta charset="utf-8">
+        </style>
+    </head>
+    <body>
+        <div id="contain">
+            <ul>
+                <li>HOME</li>
+                <li>MAIN</li>
+                <li>E-DATABASE
+                <ul>
+                    <li>hollywood</li>
+                    <li>bollywood
+                        <ul>
+                            <li>dangal</li>
+                            <li>bahubali</li>
+                        </ul>
+                    </li>
+                    <li>tollywood</li>
+                    <li>lollywood</li>
+                </ul>
+                </li>
+                <li>contact</li>
+            </ul>
+        </div>
+    </body>
+</html>
